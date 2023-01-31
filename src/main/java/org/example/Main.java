@@ -36,7 +36,6 @@ class Student
         int gpa;
         int choice;
         Scanner sc = new Scanner(System.in);
-        try{
         LOGGER.log(Level.INFO, "Enter the Studentname:");
         studentname = sc.next();
         LOGGER.log(Level.INFO, "Enter the gradelevel");
@@ -52,12 +51,6 @@ class Student
             LOGGER.log(Level.INFO, Double.toString((gpa)), "The updated student gpa is:" + (gpa));
         } else if (choice == 2) {
             s.display();
-        }
-    }catch (Exception e)
-        {
-            String ec = ""+e;
-            LOGGER.info(ec);
-            sc.nextLine();
         }
     }
 }
